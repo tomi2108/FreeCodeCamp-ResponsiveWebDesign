@@ -1,0 +1,235 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--main-white);
+  width: 99vw;
+}
+a {
+  color: var(--main-white);
+  text-decoration: none;
+}
+.page {
+  width: 99vw;
+  height: auto;
+  transform: translateY(7vh);
+  position: absolute;
+}
+nav {
+  position: fixed;
+  background: var(--main-red);
+  width: 100%;
+  height: 7vh;
+  min-width: 1700px;
+  overflow: hidden;
+  z-index: 1000;
+}
+nav div {
+  color: white;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  line-height: 7vh;
+  height: 10vh;
+  width: 10vh;
+  display: inline-block;
+  right: 0;
+}
+nav div:hover {
+  background: var(--main-blue);
+}
+
+nav div a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+nav div:first-child {
+  margin-left: 78%;
+}
+#welcome-section,
+#project-section,
+#footer-section {
+  height: 93vh;
+  width: 100%;
+}
+
+#welcome-section {
+  background: var(--main-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#project-section {
+  height: auto;
+  background: var(--main-blue);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+#footer-section {
+  background: var(--main-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.title h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+.title p {
+  font-style: italic;
+  font-weight: 100;
+  color: var(--main-red);
+}
+
+#project-section h2 {
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 3rem;
+  position: relative;
+  top: 50px;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 25%);
+  column-gap: 10vw;
+  row-gap: 5vh;
+  margin: 40px 0;
+  height: auto;
+  position: relative;
+  top: 5%;
+  width: 80%;
+  min-height: 600px;
+  min-width: 800px;
+}
+
+.project-card {
+  border-radius: 5px;
+  display: inline-block;
+  width: 400px;
+  background-color: var(--main-gray);
+}
+.project-card img {
+  width: 400px;
+  height: 389px;
+  object-fit: cover;
+  transition: transform 400ms, outline 150ms 400ms;
+  border-radius: 5px;
+}
+
+.project-card img:hover {
+  transform: scale(1.1);
+  outline: var(--main-red) solid 4px;
+}
+
+.project-card p {
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 20px;
+}
+.project-card p::before {
+  position: relative;
+  left: -2%;
+  color: rgb(179, 86, 0);
+  content: "<";
+  opacity: 0;
+  transition: 400ms;
+}
+
+.project-card p::after {
+  position: relative;
+  right: -2%;
+  color: rgb(179, 86, 0);
+  content: "/>";
+  transition: 400ms;
+  opacity: 0;
+}
+.project-card p:hover::after,
+.project-card p:hover::before {
+  opacity: 1;
+}
+.button {
+  border-radius: 3%;
+  z-index: 100;
+  padding: 1.1rem 1.7rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: block;
+  background: var(--main-gray);
+  position: relative;
+  bottom: 10px;
+  transition: 500ms;
+}
+.button:hover {
+  background: var(--main-red);
+}
+
+.footer-text {
+  text-align: center;
+}
+.footer-text h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+}
+.footer-text p {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 100;
+}
+.footer-links {
+  display: flex;
+}
+.footer-links a {
+  display: inline-block;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin: 40px;
+  font-size: 2rem;
+  transition: 500ms;
+}
+.footer-links a:hover {
+  transform: translateY(7px);
+}
+.footer {
+  background: var(--main-gray);
+  width: 100%;
+  border-top: var(--main-red) solid 3px;
+  display: block;
+  height: 20vh;
+  position: relative;
+  top: 90vh;
+}
+.footer p {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 50px;
+}

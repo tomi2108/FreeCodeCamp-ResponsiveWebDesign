@@ -1,0 +1,183 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: rgb(243, 243, 243);
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  background-color: white;
+  z-index: 50000;
+  position: fixed;
+  width: 100vw;
+  height: 8vh;
+}
+#nav-bar {
+  display: flex;
+  position: relative;
+  top: 7px;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+#nav-bar a {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: black;
+  margin: 12%;
+}
+#header-img {
+  width: 300px;
+  height: auto;
+  margin-top: 3vh;
+}
+
+.main-content {
+  width: auto;
+  display: flex;
+  transform: translateY(10vh);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+}
+.btn {
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  background-color: rgb(255, 211, 68);
+  border-radius: 4%;
+  display: block;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn:hover {
+  background-color: rgb(228, 176, 5);
+}
+.title #submit {
+  width: 200px;
+  height: 35px;
+}
+.title h3 {
+  font-size: 2rem;
+}
+.title #email {
+  position: relative;
+  display: block;
+  left: -50px;
+  width: 150%;
+}
+
+.feature-containter {
+  position: absolute;
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+.feature-img {
+  position: relative;
+  top: 60px;
+  left: -150px;
+  margin: 0 50px;
+  width: 48px;
+  height: 48px;
+}
+
+#features p {
+  display: inline-block;
+  width: 600px;
+}
+#video {
+  display: block;
+  margin: 100px 0px;
+}
+#prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.card {
+  border-radius: 1%;
+  width: 350px;
+  margin: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border: black solid 3px;
+  height: 100%;
+}
+.card h4 {
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  line-height: 40px;
+  text-align: center;
+  height: 15%;
+  width: 100%;
+  display: block;
+  background: rgb(207, 207, 207);
+}
+.card .price-tag {
+  margin: 15px;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+.card .price-content {
+  width: 40%;
+  text-align: center;
+  line-height: 30px;
+  font-size: 1.1rem;
+}
+.card .btn {
+  font-weight: normal;
+  margin: 15px;
+  width: 150px;
+  height: 50px;
+}
+
+#footer {
+  text-align: right;
+  display: block;
+  width: 1140px;
+  height: 100px;
+  background-color: rgb(207, 207, 207);
+  margin: 250px;
+  margin-bottom: 0;
+}
+#footer a {
+  display: inline-block;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+  margin-top: 20px;
+}
+#footer p {
+  opacity: 0.5;
+  margin: 40px;
+  margin-top: 0;
+}
+
+@media (max-height: 700px) {
+  header {
+    display: none;
+  }
+}
